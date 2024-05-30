@@ -381,7 +381,6 @@ def check_main_at_line_start(file_path):
     try:
 
         with open(file_path, 'r') as file:
-            print("File: ", file_path)
             # Read the file line by line
             lines = file.readlines()
             import re
@@ -389,7 +388,6 @@ def check_main_at_line_start(file_path):
             #pattern = re.compile(r'\.' + re.escape("globl") + r'\s+main')
             for line in lines:
                 if pattern.search(line):
-                    print("Line ache :)")
                     return True
             return True
 
